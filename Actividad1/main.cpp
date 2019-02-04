@@ -1,12 +1,14 @@
 #include <iostream>
 #include<math.h>
+#include <chrono>
 
 using namespace std;
+using namespace std::chrono;
 
 void trapecios(){
     double a,b,n,h,FX,Fa,Fb,SUM=0,I,XI,FXI;
 
-    cout<<"INFERIOR"<<endl;
+    cout<<endl<<"INFERIOR"<<endl;
     cin>>a;
 
     cout<<"SUPERIOR"<<endl;
@@ -14,6 +16,8 @@ void trapecios(){
 
     cout<<"TRAPECIOS"<<endl;
     cin>>n;
+
+    const std::clock_t start = std::clock();
 
     if(n>3){
         //h ES Una FORMULa
@@ -35,15 +39,23 @@ void trapecios(){
     }else{
         cout<<"NO SE PUDO"<<endl;
     }
+
+    const std::clock_t end = std::clock();
+    const double elapsed_processor_time_millisecs = (end-start) * 1000.0 / CLOCKS_PER_SEC;
+
+    cout<<endl<<endl<<"Trapecios:"<<endl<<endl;
+
+    cout << "Algorithm Runtime is: " << elapsed_processor_time_millisecs/1000.0 << " seconds."<<endl
+         << "Algorithm Runtime is: " << elapsed_processor_time_millisecs << " Millisecs."<<endl<<endl;
+
     cout<<"EL RESULTADO ES: "<<FX*4<<endl;
-    system("pause");
 }
 
 
 void simpson(){
     double a,b,h,FX,Fa,Fb,SUM=0,XI,FXI;
     int n,I;
-    cout<<"INFERIOR"<<endl;
+    cout<<endl<<"INFERIOR"<<endl;
     cin>>a;
 
     cout<<"SUPERIOR"<<endl;
@@ -57,6 +69,7 @@ void simpson(){
         return;
     }
 
+    const std::clock_t start = std::clock();
 
     if(n>3){
         //h ES Una FORMULa
@@ -82,8 +95,16 @@ void simpson(){
     }else{
         cout<<"NO SE PUDO"<<endl;
     }
+    const std::clock_t end = std::clock();
+    const double elapsed_processor_time_millisecs = (end-start) * 1000.0 / CLOCKS_PER_SEC;
+
+    cout<<endl<<endl;
+    cout<<"Simpson"<<endl<<endl;
+
+    cout << "Algorithm Runtime is: " << elapsed_processor_time_millisecs/1000.0 << " seconds."<<endl
+         << "Algorithm Runtime is: " << elapsed_processor_time_millisecs << " Millisecs."<<endl<<endl;
+
     cout<<"EL RESULTADO ES: "<<FX*4<<endl;
-    system("pause");
 }
 
 int main()
