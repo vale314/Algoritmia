@@ -1,5 +1,5 @@
 
-const a=0,b=1,n=1000000000
+const a=0,b=1,n=6
 
 
 var trapecios=function(){
