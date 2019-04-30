@@ -104,7 +104,7 @@ bool vecinos(int x, int y, int xx, int yy)
 /* Genera Movimientos Validos*/
 bool validarMovimiento()
 {
-    // Busca los lugares en la matrix con -1
+    / Busca los lugares en la matrix con -1
     int a[N*N];
 
     #pragma omp parallel
