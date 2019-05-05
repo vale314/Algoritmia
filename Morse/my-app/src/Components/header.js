@@ -15,11 +15,11 @@ class Header extends Component{
         </h3>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://github.com/vale314/Algoritmia/tree/master/Morse"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Documentation
+          Repo
         </a>
       </header>
     );
