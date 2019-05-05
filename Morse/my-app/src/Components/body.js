@@ -50,17 +50,17 @@ class Body extends Component{
             <div className="container">
                 <form onSubmit={this.handleSubmit}>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
+                        <label for="exampleInputEmail1">Texto</label>
                         <input type="text" class="form-control" id="exampleInputEmail1" 
-                                aria-describedby="emailHelp" placeholder="Enter email"
+                                aria-describedby="emailHelp" placeholder="Enter Text"
                                 name="value"
                                 value={this.state.value} onChange={this.handleChange}
                                 disabled={this.state.isMorse}/>
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
+                        <label for="exampleInputPassword1">Morse</label>
                         <input type="text" class="form-control" id="exampleInputPassword1"  name="valueMorse"
-                            placeholder="Password" value={this.state.valueMorse} onChange={this.handleChange} disabled={!this.state.isMorse}/>
+                            placeholder="Morse" value={this.state.valueMorse} onChange={this.handleChange} disabled={!this.state.isMorse}/>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"
@@ -68,7 +68,7 @@ class Body extends Component{
                             checked={this.state.isGoing}
                             onChange={this.handleChange}/>
                         <label class="form-check-label" for="defaultCheck1">
-                            Default checkbox
+                            Morse
                         </label>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>

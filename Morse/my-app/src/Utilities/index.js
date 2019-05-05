@@ -120,7 +120,7 @@ export function textToMorse(value){
     var mensajeM = [];
     var message = value
 
-    message.split("").map(function (word) {
+    message.split("").map((word) => {
         mensajeM.push(converter[word.toLowerCase()])
         mensajeM.push(" ")
     });
